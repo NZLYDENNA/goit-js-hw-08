@@ -102,3 +102,14 @@ gallery.addEventListener("click", (event) => {
 
   instance.show();
 });
+
+function out(event) {
+  if (event.code === "Escape") {
+    const modal = basicLightbox.visible();
+    if (modal) {
+      instance.close();
+    }
+  }
+}
+
+document.addEventListener("keydown", out);
