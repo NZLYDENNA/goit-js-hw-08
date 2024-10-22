@@ -102,7 +102,7 @@ gallery.addEventListener("click", (event) => {
 
   instance.show();
 
-  document.addEventListener("keydown", (event) => {
+  document.addEventListener("click", (event) => {
     if (event.code === "Escape") {
       instance.close();
     }
