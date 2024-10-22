@@ -102,9 +102,10 @@ gallery.addEventListener("click", (event) => {
 
   instance.show();
 
-  document.addEventListener("click", (event) => {
-    if (event.code === "Escape") {
+  const closeModalByEscape = (event) => {
+    if (event.key === "Escape") {
       instance.close();
+      document.removeEventListener("keydown", closeModalByEscape);
     }
-  });
+  };
 });
